@@ -1,0 +1,10 @@
+{% if squirrel_list %}
+    <ul>
+    <a href="{% url 'add' %}">Add new squirrel data</a>
+    {% for squirrel in squirrel_list %}
+    	<li><a href="/sightings/{{ squirrel.unique_squirrel_id }}/">{{ squirrel.unique_squirrel_id }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No squirrels are available.</p>
+{% endif %}

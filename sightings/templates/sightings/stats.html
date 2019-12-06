@@ -1,0 +1,38 @@
+<!doctype>
+<html>
+<head>
+	<h1>Some stats of the squirrels</h1>
+</head>
+<body>
+	<ul>There are {{ count }} squirrels in total</ul>
+	<table border="1">
+		<tr>
+			<th>primary fur color</th>
+			<th>gray</th>
+			<th>cinnamon</th>
+			<th>black</th>
+			<th>unknown</th>
+		</tr>
+		<tr>
+			<th>squirrels</th>
+			<th>{{ gray }}</th>
+			<th>{{ cinnamon }}</th>
+			<th>{{ black }}</th>
+			<th>{{ color_unknown }}</th>
+		</tr>
+		<tr>
+			<th>location</th>
+			<th>ground plane</th>
+			<th>above ground</th>
+			<th>unknown</th>
+			<th>/</th>
+		</tr>
+		<tr>
+			<th>squirrel</th>
+			<th>{{ ground_plane }}</th>
+			<th>{{ above_ground }}</th>
+			<th>{{ location_unknown }}</th>
+			<th>/</th>
+	</table>
+</body>
+</html>
