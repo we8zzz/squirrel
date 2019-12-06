@@ -47,9 +47,15 @@ def stats(request):
     ground_plane = squirrel.objects.filter(location='Ground Plane').count()
     above_ground = squirrel.objects.filter(location='Above Ground').count()
     location_unknown = squirrel.objects.filter(location='').count()
+    running = squirrel.objects.filter(running=True).count()
+    chasing = squirrel.objects.filter(chasing=True).count()
+    climbing = squirrel.objects.filter(climbing=True).count()
+    eating = squirrel.objects.filter(eating=True).count()
+    foraging = squirrel.objects.filter(foraging=True).count()
     context = {'squirrel_list': squirrel_list, 'count': count, 'gray': gray, 'cinnamon': cinnamon, 'black': black,
             'color_unknown': color_unknown, 'ground_plane': ground_plane, 'above_ground': above_ground, 
-            'location_unknown': location_unknown}
+            'location_unknown': location_unknown, 'running': running, 'chasing': chasing, 'climbing': climbing,
+            'eating': eating, 'foraging': foraging}
     return render(request, 'sightings/stats.html', context)
 
 def map(request):

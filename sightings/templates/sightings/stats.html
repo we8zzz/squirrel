@@ -1,10 +1,11 @@
 <!doctype>
 <html>
 <head>
-	<h1>Some stats of the squirrels</h1>
+	<h1>Some stats of the squirrels:</h1>
 </head>
 <body>
-	<ul>There are {{ count }} squirrels in total</ul>
+	<h2>There are {{ count }} squirrels in total</h2>
+	<p>The following table show the amount of squirrels in each category</p>
 	<table border="1">
 		<tr>
 			<th>primary fur color</th>
@@ -14,7 +15,7 @@
 			<th>unknown</th>
 		</tr>
 		<tr>
-			<th>squirrels</th>
+			<th></th>
 			<th>{{ gray }}</th>
 			<th>{{ cinnamon }}</th>
 			<th>{{ black }}</th>
@@ -28,11 +29,40 @@
 			<th>/</th>
 		</tr>
 		<tr>
-			<th>squirrel</th>
+			<th></th>
 			<th>{{ ground_plane }}</th>
 			<th>{{ above_ground }}</th>
 			<th>{{ location_unknown }}</th>
 			<th>/</th>
+		</tr>
+		<tr>
+			<th>action</th>
+			<th>running</th>
+			<th>chasing</th>
+			<th>climbing</th>
+			<th>eating</th>
+		</tr>
+		<tr>
+			<th></th>
+			<th>{{ running }}</th>
+			<th>{{ chasing }}</th>
+			<th>{{ climbing }}</th>
+			<th>{{ eating }}</th>
+		</tr>
+		<tr>
+			<th>action</th>
+			<th>foraging</th>
+			<th>/</th>
+			<th>/</th>
+			<th>/</th>
+		</tr>
+		<tr>
+			<th></th>
+			<th>{{ foraging }}</th>
+			<th>/</th>
+			<th>/</th>
+			<th>/</th>
 	</table>
+	<a href="{% url 'sightings' %}"><button type='button'>back</button></a>
 </body>
 </html>
